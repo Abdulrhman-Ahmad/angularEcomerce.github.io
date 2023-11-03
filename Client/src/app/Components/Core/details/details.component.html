@@ -1,0 +1,38 @@
+<div class="display-1 text-center">Details</div>
+<div class="container row">
+
+
+    <div class="col-6">
+      <img [src]="product.image" alt="" class="img-fluid">
+    </div>
+
+    <div class="col-6 mt-5 d-flex align-items-center">
+
+      <form  class="w-100">
+        <div class="mb-3">
+          <label for="productTitle" class="form-label">Product Title</label>
+          <input readonly type="text" class="form-control" id="productTitle" formControlName="title" [value]="product.title" >
+        </div>
+
+        <div class="mb-3">
+          <label for="productPrice" class="form-label">Product Price</label>
+          <input readonly type="number" class="form-control" id="productPrice" formControlName="price" [value]="product.price" >
+        </div>
+
+        <div class="mb-3">
+
+          <label for="productImage" class="form-label">Product Image</label>
+
+          <div class="d-flex">
+              <input readonly type="text" class="form-control" id="productImage" formControlName="imageLink"  aria-describedby="imageLink" [value]="product.image">
+          </div>
+
+          <div id="imageLink" class="form-text" >link address to your Product Image and click the Button ... </div>
+
+        </div>
+          <button type="submit" class="btn btn-dark text-light w-50" [routerLink]="['/dashboard']" >Go Back</button>
+      </form>
+
+    </div>
+
+</div>

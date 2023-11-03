@@ -1,0 +1,18 @@
+tr, #buttonsSection, img{
+  height: 10vh !important;
+}
+
+td{
+
+  text-align: center;
+
+}
+
+#title{
+  text-align: left;
+}
+
+button{
+  margin: 0.5vh;
+}
+

@@ -1,0 +1,19 @@
+<div class="container d-flex flex-wrap justify-content-center mt-5">
+
+  <div class="contain m-1" *ngFor="let item of products" >
+
+    <div>
+      <div class="card" style="width: 18rem;">
+        <img [src]="item.image" class="card-img-top" [alt]="item.title" style="height: 30vh;">
+        <div class="card-body">
+          <h5 class="card-title overflow-auto" style="height: 10vh;">{{item.title}}</h5>
+          <p class="card-text">Price <strong>{{item.price}}</strong> LE</p>
+          <button type="button" class="btn btn-dark "><i class="bi bi-cart-fill"></i> Add To Cart </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

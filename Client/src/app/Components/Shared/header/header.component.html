@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['home']" >ECommerce</a>
+
+    <div class="collapse navbar-collapse " id="navbarColor02">
+      <ul class="navbar-nav me-auto w-100 d-flex justify-content-between ">
+        <div class="d-flex navbar-nav  d-flex">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['home']" [routerLinkActive]="'active'">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['products']" [routerLinkActive]="'active'" *ngIf="log.IsLoggedIn | async">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link visually-hidden" >Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['contacts']" [routerLinkActive]="'active'">Contacts</a>
+          </li>
+        </div>
+
+        <div class="d-flex">
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['dashboard']" [routerLinkActive]="'active'" *ngIf="log.IsAdmin | async">Dashboard</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['product']" [routerLinkActive]="'active'" *ngIf="log.IsAdmin | async">Add Product</a>
+          </li>
+            <li class="nav-item " *ngIf="!(log.IsLoggedIn | async)">
+            <a class="nav-link" [routerLink]="['login']" ><strong>Login</strong></a>
+          </li>
+          <li class="nav-item " *ngIf="!(log.IsLoggedIn | async)">
+            <a class="nav-link" [routerLink]="['signup']" ><strong>Register</strong></a>
+          </li>
+
+          <li class="nav-item  bg-body" *ngIf="(log.IsLoggedIn | async)" >
+            <div class="d-flex">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOH2aZnIHWjMQj2lQUOWIL2f4Hljgab0ecZQ&usqp=CAU" alt="" style="height: 40px; border-radius:50%;" >
+            <a class="nav-link" style="cursor: pointer;">Hi,{{log.username}}</a>
+            </div>
+          </li>
+
+          <li class="nav-item " *ngIf="(log.IsLoggedIn | async)">
+            <a class="nav-link" style="cursor: pointer;" (click)="logout()" ><strong>LogOut</strong></a>
+          </li>
+
+
+
+        </div>
+
+      </ul>
+    </div>
+
+    <div class="d-flex ">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="text-light">
+
+
+    </div>
+    </div>
+
+
+
+  </div>
+</nav>

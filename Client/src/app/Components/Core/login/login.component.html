@@ -1,0 +1,29 @@
+<div class="display-1 text-center mt-5 container" style="cursor: pointer;">LogIn</div>
+
+
+<div class="mt-5">
+  <form (submit)="onSubmit($event)" [formGroup]="formgroup">
+    <div class="container w-50 m-auto">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+        <div class="text-danger form-text" *ngIf="emailTouched && emailRequired" >Required Field!</div>
+        <div class="text-danger form-text" *ngIf="emailTouched && !emailRequired &&!emailValid">Wrong Email!</div>
+        <div class="text-success form-text" *ngIf="!emailRequired && emailValid" >Looks Good!</div>
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        <div class="text-danger form-text" *ngIf="passTouched && passRequired" >Required Field!</div>
+        <div class="text-danger form-text" *ngIf="passTouched && !passRequired && !passValid" >At least 8 Digits!</div>
+        <div class="text-success form-text" *ngIf="!passRequired && passValid" >Looks Good!</div>
+      </div>
+
+      <div>Don't have an account, <a class="anchor" [routerLink]="['/signup']" >Register!</a></div>
+      <br>
+      <button type="submit" class="btn btn-primary w-25" >Submit</button>
+
+    </div>
+    </form>
+</div>

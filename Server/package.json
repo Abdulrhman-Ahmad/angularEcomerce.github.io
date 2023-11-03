@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdulrahman",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

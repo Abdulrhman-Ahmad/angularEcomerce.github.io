@@ -1,0 +1,10 @@
+button, .checkk{
+  background-color: #212529;
+  border-color: #212529;
+}
+
+button:hover{
+  background-color: #545e66;
+  border-color: black;
+
+}
