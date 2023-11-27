@@ -1,6 +1,5 @@
 import { jwtDecode } from 'jwt-decode';
 import { CanActivateFn } from '@angular/router';
-import { jwtPayload } from 'jwt-payloader';
 import { IData } from '../Interfaces/idata';
 
 
@@ -11,17 +10,15 @@ const jwt = localStorage.getItem('token');
 // ---------------------------------------------
 
 
-
   if (state.url === '/login' || state.url === '/signup') {
     return jwt == null
   }
 
-  if (state.url ==='/products')
+  if (state.url ==='/products' || state.url === '/cart')
   {
     if (jwt)
     return true
   }
-
 
   if (state.url === '/dashboard' || state.url === '/product') {
 
@@ -33,8 +30,6 @@ const jwt = localStorage.getItem('token');
     else
     return false
   }
-
-
 
   //default
   return !jwt == null

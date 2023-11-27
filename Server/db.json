@@ -215,18 +215,6 @@
         "rate": 4.7,
         "count": 130
       }
-    },
-    {
-      "id": 20,
-      "title": "Motorcycle ",
-      "price": 759.98,
-      "description": "",
-      "category": "",
-      "image": "https://damon.com/assets/hypersport/Pre_MidSun.webp",
-      "rating": {
-        "rate": 0,
-        "count": 0
-      }
     }
   ],
   "users": [
@@ -289,6 +277,28 @@
       "email": "a@gmail.com",
       "username": "abdulrahman",
       "password": "192eb1af97a6f0fd274d5671bb3b6d9778f6dde6276ff6177f6969b578375c0a",
+      "name": {
+        "firstname": "",
+        "lastname": ""
+      },
+      "phone": "",
+      "__v": 0
+    },
+    {
+      "address": {
+        "geolocation": {
+          "lat": "",
+          "long": ""
+        },
+        "city": "",
+        "street": "",
+        "number": 0,
+        "zipcode": ""
+      },
+      "id": 4,
+      "email": "abdulrahmanabualmagd@gmail.com",
+      "username": "abdulrahmanabualmagd",
+      "password": "6d0ae51e1ec01ea2ea5aaa1a11260429b34ce9a32d676480fbcd7e24d05e7fc3",
       "name": {
         "firstname": "",
         "lastname": ""
@@ -394,18 +404,6 @@
         {
           "productId": 12,
           "quantity": 3
-        }
-      ],
-      "__v": 0
-    },
-    {
-      "id": 7,
-      "userId": 8,
-      "date": "2020-03-01T00:00:00.000Z",
-      "products": [
-        {
-          "productId": 18,
-          "quantity": 1
         }
       ],
       "__v": 0

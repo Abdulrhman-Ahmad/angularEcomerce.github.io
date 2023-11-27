@@ -11,6 +11,7 @@ import { ProductFormComponent } from './Components/Core/product-form/product-for
 import { DashboardComponent } from './Components/Core/dashboard/dashboard.component';
 import { DetailsComponent } from './Components/Core/details/details.component';
 import { authGuard } from './Guard/auth.guard';
+import { CartComponent } from './Components/Core/cart/cart.component';
 
 const routes: Routes = [
   {path:"home", component:HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:"details/:id", component:DetailsComponent, canActivate: [authGuard]},
   {path:"login",component:LoginComponent, canActivate: [authGuard]},
   {path:"signup", component:RegisterComponent, canActivate: [authGuard]},
+  {path:"cart", component:CartComponent, canActivate: [authGuard]},
   {path:"contacts", component:ContactsComponent },
   {path:"", component:HomeComponent, canActivate: [authGuard]},
   {path:"**", component:NotfoundComponent, canActivate: [authGuard]}

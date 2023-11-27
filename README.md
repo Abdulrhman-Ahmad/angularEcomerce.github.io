@@ -1,2 +1,2 @@
-# Lab Day Six
+# Angular Ecommerce Project 
 

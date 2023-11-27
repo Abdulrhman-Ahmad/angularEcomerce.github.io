@@ -18,6 +18,7 @@ import { ProductFormComponent } from './Components/Core/product-form/product-for
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Components/Core/dashboard/dashboard.component';
 import { DetailsComponent } from './Components/Core/details/details.component';
+import { CartComponent } from './Components/Core/cart/cart.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { DetailsComponent } from './Components/Core/details/details.component';
     ProductFormComponent,
     DashboardComponent,
     DetailsComponent,
+    CartComponent,
 
   ],
   imports: [
