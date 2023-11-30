@@ -1,0 +1,13 @@
+/* button{
+    background-color: #211e19;
+    border: 0px;
+    border-radius: 5px;
+    color: whitesmoke;
+} */
+
+td{
+    overflow: hidden;
+    max-height: 10vh !important;
+}
+
+

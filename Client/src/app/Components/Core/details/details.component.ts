@@ -38,7 +38,7 @@ export class DetailsComponent implements OnInit {
 
         this.ProductApi.GetProductById(this.product.id).subscribe(d=>{
 
-          this.product = d
+          this.product = d[0]
 
         });
       }

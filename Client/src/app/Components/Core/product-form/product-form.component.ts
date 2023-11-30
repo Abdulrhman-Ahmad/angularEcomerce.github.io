@@ -46,11 +46,11 @@ export class ProductFormComponent implements OnInit {
         this.ButtonAction = "Edit Product"
         this.ProductApi.GetProductById(this.product.id).subscribe(d=>{
           this.formGroup.setValue({
-            title: d.title,
-            price: d.price,
-            imageLink: d.image
+            title: d[0].title,
+            price: d[0].price,
+            imageLink: d[0].image
           });
-          this.ImageUrl = d.image;
+          this.ImageUrl = d[0].image;
         });
       }
 
